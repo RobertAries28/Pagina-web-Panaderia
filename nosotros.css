@@ -1,0 +1,247 @@
+body{
+    padding: 0px;
+    margin: 0px;
+   
+}
+
+
+
+header{
+
+    width: 1200px;
+    margin: auto;
+    font-size: 30px;
+  
+  
+   
+
+}
+
+header img {
+    margin-bottom: 10px;
+}
+
+
+.icono{
+    display: flex;
+    justify-content: space-between;
+}
+
+.items1{
+    display: flex;
+ 
+}
+
+.items1:nth-child(1){
+    align-items: center;
+ 
+}
+
+.items2{
+    align-self: center;
+    padding: 20px;
+}
+
+nav ul{
+ 
+   
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    color: brown;
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-weight: 100px;
+ box-shadow:  0px 2.5px 0px grey;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+ nav{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: white;
+    width: 1200px;
+    margin: auto;
+    font-size: 30px;
+  
+  
+    
+}
+
+
+
+nav li:hover{
+    border: 0.5px solid slategrey;
+    padding: 2px;
+  
+}
+
+
+
+/*slider*/
+.slider{
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+.slider ul{
+    padding: 0px;
+    width: 400%;
+    display: flex;
+    animation: cambio 20s infinite alternate;
+    animation-timing-function: ease-in;
+}
+
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+    
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+    
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+    
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+.principal{
+    width: 1000px;
+    margin: auto;
+    display: flex;
+    background: black;
+}
+
+.columna1{
+    width: 250px;
+    background: lightgoldenrodyellow;
+    margin-top: 20px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.columna1 img{
+    padding-top: 20px;
+}
+
+.columna1 p{
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    padding-left: 20px;
+   padding-right: 20px;
+}
+
+
+
+.columna2{
+    width: 750px;
+    background: black;
+    color: white;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 30px;
+    
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.columna2 img{
+    margin: 10px;
+   float:right;
+   box-shadow: 5px 5px 8px #efefef ,
+            -5px -5px 8px #efefef;
+}
+
+hr{
+    
+    width: 95%;
+    background: grey;
+}
+
+/*slider manual*/
+
+.slidermanualPrincipal{
+	margin:0;
+	background: black;
+	display: flex;
+	min-height: 100vh;
+}
+
+.slidermanual{
+	width: 500px;
+	height: 300px;
+    margin: auto;
+    margin-top: 40px;
+	position: relative;
+	list-style:none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;/*el radio button se va hacia abajo*/
+	
+}
+.slidermanual img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	opacity: 0;
+	transition: all 0.7s;
+}
+.slidermanual input[type="radio"]{
+	display: none
+}
+
+/*el icono ~ significa que cuando el radio este activado selecciona la imagen*/
+
+.slidermanual input[type="radio"]:checked ~ img{
+opacity: 1; 
+}
+.slidermanual input[type="radio"] + label{
+		position: relative;/*eso te ayuda a activar el z index*/
+	z-index: 50;/*eso te ayuda aque el radio este por encima de las imagenes*/
+	margin: 18px; /*eso te ayuda para que se vea el radio*/
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: white;
+	border-radius: 50%;
+	border: 2px solid black;
+	cursor: pointer;
+	}
+.slidermanual input[type="radio"]:checked + label{
+	background: black;
+    border: 2px solid white;}
+    
+
+.letra{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}    
